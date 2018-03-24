@@ -1,5 +1,6 @@
 package com.zhangyong.activitytest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +22,8 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(FirstActivity.this, "你真听话！", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -35,7 +38,7 @@ public class FirstActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.add_item:
-                Toast.makeText(FirstActivity.this, "不要乱点", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FirstActivity.this, "不要乱点", Toast.LENGTH_LONG).show();
                 break;
             case R.id.remove_item:
                 Toast.makeText(FirstActivity.this, "就知道你会乱点，没了吧！", Toast.LENGTH_SHORT).show();
