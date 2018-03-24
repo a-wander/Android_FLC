@@ -26,6 +26,17 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn2 = (Button)findViewById(R.id.button_3);
+        btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.zhangyong.activitytest.ACTION_START");
+                // 只能有一个action，但是可以有多个category,当为匹配到时会崩溃
+                intent.addCategory("com.zhangyong.activitytest.MY_CATEGORY");
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

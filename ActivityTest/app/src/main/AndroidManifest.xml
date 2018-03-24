@@ -17,7 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" android:label="第二个活动页面"></activity>
+        <activity android:name=".SecondActivity" android:label="第二个活动页面">
+            <intent-filter>
+                <action android:name="com.zhangyong.activitytest.ACTION_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.zhangyong.activitytest.MY_CATEGORY"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
