@@ -10,9 +10,13 @@
     <Button
         android:id="@+id/start_normal_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="打开常规活动"/>
 
     <Button
+        android:id="@+id/start_dialog_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="打开对话框活动"/>
+
 </LinearLayout>
