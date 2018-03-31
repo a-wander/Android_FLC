@@ -8,10 +8,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="显示启动"/>
+
     <Button
         android:id="@+id/button_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="隐式启动"/>
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开浏览器" />
 
 </LinearLayout>

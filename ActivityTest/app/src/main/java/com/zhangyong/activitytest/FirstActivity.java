@@ -1,6 +1,7 @@
 package com.zhangyong.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,6 +35,16 @@ public class FirstActivity extends AppCompatActivity {
                 Intent intent = new Intent("com.zhangyong.activitytest.ACTION_START");
                 // 只能有一个action，但是可以有多个category,当为匹配到时会崩溃
                 intent.addCategory("com.zhangyong.activitytest.MY_CATEGORY");
+                startActivity(intent);
+            }
+        });
+
+        Button btn3 = (Button) findViewById(R.id.button_4);
+        btn3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
             }
         });
