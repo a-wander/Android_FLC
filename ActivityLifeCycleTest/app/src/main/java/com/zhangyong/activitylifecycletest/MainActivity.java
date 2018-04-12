@@ -2,10 +2,12 @@ package com.zhangyong.activitylifecycletest;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -19,6 +21,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String temp = savedInstanceState.getString("key");
             Log.d(TAG, "onCreate: "+temp);
         }
+
+        Button btn = (Button)findViewById(R.id.start_normal_activity);
+        btn.setOnClickListener(MainActivity.this);
+//        btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, NormalActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        Button btn1 = (Button)findViewById(R.id.start_dialog_activity);
+        btn1.setOnClickListener(MainActivity.this);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
